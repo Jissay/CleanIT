@@ -1,0 +1,53 @@
+{
+  "name": "@angular/upgrade",
+  "version": "2.1.0",
+  "description": "Angular - the library for easing update from v1 to v2",
+  "main": "bundles/upgrade.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "author": {
+    "name": "angular"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/core": "2.1.0",
+    "@angular/compiler": "2.1.0",
+    "@angular/platform-browser": "2.1.0",
+    "@angular/platform-browser-dynamic": "2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular/issues"
+  },
+  "homepage": "https://github.com/angular/angular#readme",
+  "_id": "@angular/upgrade@2.1.0",
+  "scripts": {},
+  "_shasum": "3ec8e95f3fe50a64a3f2485b8ff8f1cb16a891d8",
+  "_from": "@angular/upgrade@>=2.1.0 <2.2.0",
+  "_resolved": "https://registry.npmjs.org/@angular/upgrade/-/upgrade-2.1.0.tgz",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.7.0",
+  "_npmUser": {
+    "name": "angular",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "3ec8e95f3fe50a64a3f2485b8ff8f1cb16a891d8",
+    "tarball": "https://registry.npmjs.org/@angular/upgrade/-/upgrade-2.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/upgrade-2.1.0.tgz_1476304609421_0.8460494733881205"
+  },
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}

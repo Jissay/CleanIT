@@ -1,0 +1,50 @@
+{
+  "name": "@angular/common",
+  "version": "2.1.0",
+  "description": "Angular - commonly needed directives and services",
+  "main": "bundles/common.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "author": {
+    "name": "angular"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/core": "2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular/issues"
+  },
+  "homepage": "https://github.com/angular/angular#readme",
+  "_id": "@angular/common@2.1.0",
+  "scripts": {},
+  "_shasum": "159037ee8ea5b75951cbcb371749504b535f2c2d",
+  "_from": "@angular/common@>=2.1.0 <2.2.0",
+  "_resolved": "https://registry.npmjs.org/@angular/common/-/common-2.1.0.tgz",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.7.0",
+  "_npmUser": {
+    "name": "angular",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "159037ee8ea5b75951cbcb371749504b535f2c2d",
+    "tarball": "https://registry.npmjs.org/@angular/common/-/common-2.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/common-2.1.0.tgz_1476304527431_0.5600854998920113"
+  },
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
