@@ -1,2 +1,4 @@
 Sources/app/build/
 Sources/app/build/**
+Sources/npm-debug.log
+.DS_Store

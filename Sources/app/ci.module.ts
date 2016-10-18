@@ -3,7 +3,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 
 import { AppComponent }         from './ci.component';
-import { GameDetailComponent }  from './components/game-detail.component';
+import { DeviceDetailComponent }  from './components/device-detail.component';
 
 @NgModule({
     imports:      [ 
@@ -12,7 +12,7 @@ import { GameDetailComponent }  from './components/game-detail.component';
     ],
     declarations: [ 
         AppComponent,
-        GameDetailComponent
+        DeviceDetailComponent
     ],
 
     bootstrap:    [ AppComponent ]

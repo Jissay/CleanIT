@@ -18,14 +18,14 @@ body {
     color: white;
 }
 
-.games {
+.devices {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
 }
 
-.games li {
+.devices li {
   cursor: pointer;
   position: relative;
   left: 0;
@@ -36,23 +36,23 @@ body {
   border-radius: 4px;
 }
 
-.games li.selected:hover {
+.devices li.selected:hover {
   background-color: #BBD8DC !important;
   color: white;
 }
 
-.games li:hover {
+.devices li:hover {
   color: #607D8B;
   background-color: #DDD;
   left: .1em;
 }
 
-.games .text {
+.devices .text {
   position: relative;
   top: -3px;
 }
 
-.games .item {
+.devices .item {
   display: inline-block;
   font-size: small;
   color: white;

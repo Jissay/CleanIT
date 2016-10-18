@@ -10,17 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var mockdata_1 = require('./mockdata');
-var GameService = (function () {
-    function GameService() {
+var DeviceService = (function () {
+    function DeviceService() {
     }
-    GameService.prototype.getGames = function () {
-        return Promise.resolve(mockdata_1.GAMES);
+    DeviceService.prototype.getDevices = function () {
+        return Promise.resolve(mockdata_1.DEVICES);
     };
-    GameService = __decorate([
+    DeviceService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], GameService);
-    return GameService;
+    ], DeviceService);
+    return DeviceService;
 }());
-exports.GameService = GameService;
+exports.DeviceService = DeviceService;
 //# sourceMappingURL=game.service.js.map

@@ -1,7 +1,11 @@
-import { Game }     from '../members/game';
+import { Device }     from '../members/device';
 
-export const GAMES: Game[] = [
-    { id: 1, name: 'Tetris'},
-    { id: 2, name: 'Space Invaders'},
-    { id: 3, name: 'Pong'}
+export const DEVICES: Device[] = [
+    { id: 1, name: 'Sens\'it'},
+    { id: 2, name: 'Axibox'},
+    { id: 3, name: 'Novapass'},
+    { id: 4, name: 'Extelsmart'},
+    { id: 5, name: 'Delta Wifi'},
+    { id: 6, name: 'Sacha'},
+    { id: 7, name: 'Smart Luggage Tracker'}
 ];

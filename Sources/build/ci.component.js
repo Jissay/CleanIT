@@ -9,40 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var game_service_1 = require('./services/game.service');
+var device_service_1 = require('./services/device.service');
 /** SAMPLE DATA **/
 var NAME = 'Jissay';
 /** APP COMPONENT TEMPLATE **/
 var AppComponent = (function () {
-    function AppComponent(gameService) {
-        this.gameService = gameService;
+    function AppComponent(deviceService) {
+        this.deviceService = deviceService;
         /** DATA **/
         this.appName = 'Clean IT';
         this.user = {
             id: 1,
             name: NAME,
-            games: new Array()
+            devices: new Array()
         };
     }
     /** METHODS **/
-    AppComponent.prototype.onSelect = function (game) {
-        this.selectedGame = game;
+    AppComponent.prototype.onSelect = function (device) {
+        this.selectedDevice = device;
     };
-    AppComponent.prototype.getGames = function () {
+    AppComponent.prototype.getDevices = function () {
         var _this = this;
-        this.gameService.getGames().then(function (games) { return _this.user.games = games; });
+        this.deviceService.getDevices().then(function (devices) { return _this.user.devices = devices; });
     };
     /** ONINIT IMPLEMENTATION **/
     AppComponent.prototype.ngOnInit = function () {
-        this.getGames();
+        this.getDevices();
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'ci-app',
-            template: "\n    <h1>Hello {{user.name}}, welcome to {{appName}}</h1>\n\n    <h2>My Games</h2>\n    <ul class=\"games\">\n      <li *ngFor=\"let game of user.games\" [class.selected]=\"game == selectedGame\" (click)=\"onSelect(game)\">\n        <span class=\"item\">{{game.id}}</span> {{game.name}}\n      </li>\n    </ul>\n\n    <ci-game-detail [game]=\"selectedGame\"></ci-game-detail>\n\n    <h2>My details!</h2>\n    <div> \n      <label>Your id is :</label> {{user.id}} \n    </div>\n    \n    <div>\n      <label>Your name is :</label>\n      <input [(ngModel)]=\"user.name\" placeholder=\"name\">\n    </div>\n  ",
-            providers: [game_service_1.GameService]
+            template: "\n    <h1>Hello {{user.name}}, welcome to {{appName}}</h1>\n\n    <h2>My Devices</h2>\n    <ul class=\"devices\">\n      <li *ngFor=\"let device of user.devices\" [class.selected]=\"device == selectedDevice\" (click)=\"onSelect(device)\">\n        <span class=\"item\">{{device.id}}</span> {{device.name}}\n      </li>\n    </ul>\n\n    <ci-device-detail [device]=\"selectedDevice\"></ci-device-detail>\n\n    <h2>My details!</h2>\n    <div> \n      <label>Your id is :</label> {{user.id}} \n    </div>\n    \n    <div>\n      <label>Your name is :</label>\n      <input [(ngModel)]=\"user.name\" placeholder=\"name\">\n    </div>\n  ",
+            providers: [device_service_1.DeviceService]
         }), 
-        __metadata('design:paramtypes', [game_service_1.GameService])
+        __metadata('design:paramtypes', [device_service_1.DeviceService])
     ], AppComponent);
     return AppComponent;
 }());

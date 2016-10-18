@@ -9,28 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var ci_component_1 = require('./ci.component');
-var device_detail_component_1 = require('./components/device-detail.component');
-var AppModule = (function () {
-    function AppModule() {
+var mockdata_1 = require('./mockdata');
+var DeviceService = (function () {
+    function DeviceService() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [
-                ci_component_1.AppComponent,
-                device_detail_component_1.DeviceDetailComponent
-            ],
-            bootstrap: [ci_component_1.AppComponent]
-        }), 
+    DeviceService.prototype.getDevices = function () {
+        return Promise.resolve(mockdata_1.DEVICES);
+    };
+    DeviceService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], DeviceService);
+    return DeviceService;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=ci.module.js.map
+exports.DeviceService = DeviceService;
+//# sourceMappingURL=device.service.js.map
