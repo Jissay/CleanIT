@@ -4,15 +4,11 @@
     // See https://angular.io/docs/ts/latest/quickstart.html#!#create-and-configure
     "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
     "noImplicitAny": true,
-    "types":[]
-
-    // OutDir directory to avoid having js mixed with ts files
-    //"outDir": "build"
+    "outDir": "build",
+    "rootDir": "."
   }
 }
