@@ -1,3 +1,5 @@
+Sources/app/**/*.js
+Sources/app/**/*.map
 Sources/app/build/
 Sources/app/build/**
 Sources/npm-debug.log

@@ -9,9 +9,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
+    "types":[]
 
     // OutDir directory to avoid having js mixed with ts files
-    "outDir": "build"
+    //"outDir": "build"
   }
 }

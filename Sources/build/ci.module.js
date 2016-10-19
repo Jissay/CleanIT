@@ -11,8 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var router_1 = require('@angular/router');
 var ci_component_1 = require('./ci.component');
+var dashboard_component_1 = require('./components/dashboard/dashboard.component');
+var devices_component_1 = require('./components/devices.component');
 var device_detail_component_1 = require('./components/device-detail.component');
+var device_service_1 = require('./services/device.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,12 +24,30 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: 'devices',
+                        component: devices_component_1.DevicesComponent
+                    },
+                    {
+                        path: 'dashboard',
+                        component: dashboard_component_1.DashboardComponent
+                    },
+                    {
+                        path: '',
+                        redirectTo: '/dashboard',
+                        pathMatch: 'full'
+                    }
+                ])
             ],
             declarations: [
                 ci_component_1.AppComponent,
-                device_detail_component_1.DeviceDetailComponent
+                devices_component_1.DevicesComponent,
+                device_detail_component_1.DeviceDetailComponent,
+                dashboard_component_1.DashboardComponent
             ],
+            providers: [device_service_1.DeviceService],
             bootstrap: [ci_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -9,40 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var device_service_1 = require('./services/device.service');
-/** SAMPLE DATA **/
-var NAME = 'Jissay';
-/** APP COMPONENT TEMPLATE **/
+var user_1 = require('./members/user');
 var AppComponent = (function () {
-    function AppComponent(deviceService) {
-        this.deviceService = deviceService;
-        /** DATA **/
-        this.appName = 'Clean IT';
-        this.user = {
-            id: 1,
-            name: NAME,
-            devices: new Array()
-        };
+    function AppComponent() {
+        this.title = 'Tour of Devices';
+        this.user = user_1.MAIN_USER;
     }
-    /** METHODS **/
-    AppComponent.prototype.onSelect = function (device) {
-        this.selectedDevice = device;
-    };
-    AppComponent.prototype.getDevices = function () {
-        var _this = this;
-        this.deviceService.getDevices().then(function (devices) { return _this.user.devices = devices; });
-    };
-    /** ONINIT IMPLEMENTATION **/
-    AppComponent.prototype.ngOnInit = function () {
-        this.getDevices();
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'ci-app',
-            template: "\n    <h1>Hello {{user.name}}, welcome to {{appName}}</h1>\n\n    <h2>My Devices</h2>\n    <ul class=\"devices\">\n      <li *ngFor=\"let device of user.devices\" [class.selected]=\"device == selectedDevice\" (click)=\"onSelect(device)\">\n        <span class=\"item\">{{device.id}}</span> {{device.name}}\n      </li>\n    </ul>\n\n    <ci-device-detail [device]=\"selectedDevice\"></ci-device-detail>\n\n    <h2>My details!</h2>\n    <div> \n      <label>Your id is :</label> {{user.id}} \n    </div>\n    \n    <div>\n      <label>Your name is :</label>\n      <input [(ngModel)]=\"user.name\" placeholder=\"name\">\n    </div>\n  ",
-            providers: [device_service_1.DeviceService]
+            template: "\n\t\t\n    \t<h1>Hello {{user.name}}, welcome to {{appName}}</h1>\n\t\t<nav>\n\t\t\t<a routerLink=\"/dashboard\">Dashboard</a>\n\t\t\t<a routerLink=\"/devices\">Devices</a>\n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t"
         }), 
-        __metadata('design:paramtypes', [device_service_1.DeviceService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
