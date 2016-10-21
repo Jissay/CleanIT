@@ -70,5 +70,10 @@ module.exports = {
 
     // Generate the index.html
     new HtmlWebpackPlugin({ template: 'index.html' })
-  ]
+  ],
+
+  devServer: {
+    historyApiFallback: true,
+    stats: 'minimal'
+}
 }

@@ -16,6 +16,9 @@ import { DashboardComponent }     from './components/dashboard/dashboard.compone
 import { DevicesComponent }       from './components/devices/devices.component';
 import { DeviceDetailComponent }  from './components/device-detail/device-detail.component';
 import { DeviceSearchComponent }  from './components/device-search/device-search.component';
+import { LoginComponent }         from './components/login/login.component';
+import { LandingComponent }       from './components/landing/landing.component';
+
 
 import { DeviceService }          from './services/device.service';
 
@@ -32,7 +35,9 @@ import { DeviceService }          from './services/device.service';
         DevicesComponent,
         DeviceDetailComponent,
         DeviceSearchComponent,
-        DashboardComponent
+        DashboardComponent,
+        LoginComponent,
+        LandingComponent
     ],
     providers:  [ DeviceService ],
     bootstrap:  [ AppComponent ]
