@@ -1,0 +1,24 @@
+<h2>My Devices</h2>
+
+<div>
+  <label>Device name:</label> <input #deviceName />
+  <button (click)="add(deviceName.value); deviceName.value=''">Add</button>
+</div>
+
+<ul class="devices">
+	<li *ngFor="let device of user.devices" 
+	[class.selected]="device == selectedDevice" 
+	(click)="onSelect(device)">
+
+	<span class="item">{{device.id}}</span> {{device.name}}
+	
+	<button class="delete" (click)="delete(device); $event.stopPropagation()">x</button>
+	</li>
+</ul>
+
+<div *ngIf="selectedDevice">
+  <h2>
+    {{selectedDevice.name | uppercase}} is my device
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

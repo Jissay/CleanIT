@@ -1,8 +1,10 @@
-<h3>Top Devices !</h3>
+<h2>Top Devices !</h2>
 <div class="grid grid-pad">
-  <div *ngFor="let device of user.devices" (click)="gotoDetail(device)" class="col-1-4">
+  <div *ngFor="let device of topDevices" (click)="gotoDetail(device)" class="col-1-4">
     <div class="module device">
       <h4>{{device.name}}</h4>
     </div>
   </div>
 </div>
+
+<device-search></device-search>
