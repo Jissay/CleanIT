@@ -1,3 +1,17 @@
+/* CI CSS RULES */
+body {
+  max-width: 1140px; /* Blame yerome fowr zis */
+  margin:auto;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ANGULAR 2 QUICKSTART CSS RULES */
+
 /* Master Styles */
 h1 {
   color: #369;
@@ -8,9 +22,6 @@ h2, h3 {
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
-}
-body {
-  margin: 2em;
 }
 
 .selected {
@@ -104,15 +115,7 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
 body, input[text], button {
   color: #888;
   font-family: Cambria, Georgia;
-}
-/* . . . */
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
 }

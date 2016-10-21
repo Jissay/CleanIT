@@ -19,7 +19,6 @@ import { DeviceSearchComponent }  from './components/device-search/device-search
 import { LoginComponent }         from './components/login/login.component';
 import { LandingComponent }       from './components/landing/landing.component';
 
-
 import { DeviceService }          from './services/device.service';
 
 @NgModule({
