@@ -7,7 +7,7 @@ import { DeviceSearchService } from '../../services/device-search.service';
 import { Device } from '../../members/device';
 
 @Component({
-	selector: 'device-search',
+	selector: 'ci-device-search',
 	templateUrl: 'app/components/device-search/device-search.component.html',
 	styleUrls: [ 'app/components/device-search/device-search.component.css' ],
 	providers: [DeviceSearchService]

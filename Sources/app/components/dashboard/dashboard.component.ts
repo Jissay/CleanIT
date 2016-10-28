@@ -6,7 +6,7 @@ import { Device }			from '../../members/device';
 import { DeviceService }	from '../../services/device.service';
 
 @Component({
-	selector: 'my-dashboard',
+	selector: 'ci-dashboard',
 	templateUrl: 'app/components/dashboard/dashboard.component.html',
 	styleUrls: [ 'app/components/dashboard/dashboard.component.css' ]
 })

@@ -18,8 +18,10 @@ import { DeviceDetailComponent }  from './components/device-detail/device-detail
 import { DeviceSearchComponent }  from './components/device-search/device-search.component';
 import { LoginComponent }         from './components/login/login.component';
 import { LandingComponent }       from './components/landing/landing.component';
+import { HeaderComponent }        from './components/header/header.component';
 
 import { DeviceService }          from './services/device.service';
+import { AppDataService }         from './services/app-data.service';
 
 @NgModule({
     imports:      [ 
@@ -36,9 +38,10 @@ import { DeviceService }          from './services/device.service';
         DeviceSearchComponent,
         DashboardComponent,
         LoginComponent,
-        LandingComponent
+        LandingComponent,
+        HeaderComponent
     ],
-    providers:  [ DeviceService ],
+    providers:  [ DeviceService, AppDataService ],
     bootstrap:  [ AppComponent ]
 })
 

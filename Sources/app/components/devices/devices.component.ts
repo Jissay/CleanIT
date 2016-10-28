@@ -9,7 +9,7 @@ import { DeviceService }          from '../../services/device.service';
 /** APP COMPONENT TEMPLATE **/
 
 @Component({
-  selector: 'my-devices',
+  selector: 'ci-devices',
   templateUrl: 'app/components/devices/devices.component.html',
   styleUrls: [ 'app/components/devices/devices.component.css' ]
 

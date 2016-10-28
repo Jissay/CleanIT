@@ -1,11 +1,8 @@
 import { Device }         from './device';
 
-/** SAMPLE DATA */
-export const NAME: string = 'Jissay';
-
 export const MAIN_USER: User  = {
     id: 1,
-    name: NAME,
+    name: "",
     devices: new Array<Device>()
 };
 
