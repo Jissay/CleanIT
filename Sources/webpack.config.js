@@ -62,6 +62,15 @@ module.exports = {
         test: /\.html$/,
         loader: 'raw-loader',
         exclude: [ path.resolve(__dirname, "index.html") ]
+      },
+      // Needed to compile "Angular2-modal" as ES5 (otherwise, obscure error...)
+      {
+        test: /\.js$/,
+        include: /(angular2-modal)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
       }
     ]
   },

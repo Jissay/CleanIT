@@ -11,6 +11,12 @@ import { AppRoutingModule }   from './ci-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './services/in-memory-data.service';
 
+// Allows to store session data locally
+import { CoolStorageModule } from "angular2-cool-storage";
+
+// Modal dialogs
+import { ModalModule }       from "ng2-modal";
+
 import { AppComponent }           from './ci.component';
 import { DashboardComponent }     from './components/dashboard/dashboard.component';
 import { DevicesComponent }       from './components/devices/devices.component';
@@ -29,7 +35,9 @@ import { AppDataService }         from './services/app-data.service';
         FormsModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        AppRoutingModule
+        AppRoutingModule,
+        CoolStorageModule,
+        ModalModule
     ],
     declarations: [ 
         AppComponent,

@@ -1,7 +1,7 @@
 <div>
 	<h1 class="header-item">Welcome to CleanIT</h1>
-
-	<button class="header-item">Create an account</button>
-	<a class="header-item" routerLink="/dashboard" routerLinkActive="active">Sign in</a>
 	
+	<button *ngIf="!appDataService.isLoggedIn()" class="header-item" (click)="appDataService.login()">Sign in</button>
+	<button *ngIf="appDataService.isLoggedIn()" class="header-item" (click)="appDataService.disconnect()">Log out</button>
+	<a class="header-item" routerLink="/dashboard"></a>
 </div>

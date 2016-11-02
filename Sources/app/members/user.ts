@@ -2,7 +2,7 @@ import { Device }         from './device';
 
 export const MAIN_USER: User  = {
     id: 1,
-    name: "",
+    name: "Jissay",
     devices: new Array<Device>()
 };
 
