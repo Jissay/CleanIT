@@ -1,8 +1,33 @@
 <ci-header></ci-header>
-<!--<h1>Hello {{user.name}}, welcome !</h1>
+
+<h1>Hello<span *ngIf="user"> {{user.name}}</span>, welcome !</h1>
 <nav>
 	<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
 	<a routerLink="/devices" routerLinkActive="active">Devices</a>
-</nav>-->
-<ci-landing></ci-landing>
-<!--<router-outlet></router-outlet>-->
+</nav>
+
+<button (click)="myModal.open()">Open modal dialog</button>
+
+<modal #myModal title="Modal title"
+        cancelButtonLabel="cancel"
+        submitButtonLabel="submit"
+        modalClass="modal-lg modal-sm any-other-css-class"
+        [hideCloseButton]="false"
+        [closeOnEscape]="true"
+        [closeOnOutsideClick]="true">
+
+    <modal-header>
+        Modal header content goes there.
+    </modal-header>
+
+    <modal-content>
+        Modal body content goes there.
+    </modal-content>
+
+    <modal-footer>
+        Modal footer content goes there.
+    </modal-footer>
+
+</modal>
+
+<router-outlet></router-outlet>
