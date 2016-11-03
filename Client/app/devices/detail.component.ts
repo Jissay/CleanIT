@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
-import { Device }                   from '../../members/device';
-import { DeviceService }            from '../../services/device.service';
+import { Device }                   from './device';
+import { DeviceService }            from './device.service';
 
 @Component({
     selector: 'ci-device-detail',
-    templateUrl: 'app/components/device-detail/device-detail.component.html',
-    styleUrls: [ 'app/components/device-detail/device-detail.component.css' ]
+    templateUrl: 'app/devices/html/detail.component.html',
+    styleUrls: [ 'app/devices/css/detail.component.css' ]
 })
 
 export class DeviceDetailComponent implements OnInit {

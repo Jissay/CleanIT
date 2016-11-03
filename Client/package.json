@@ -25,7 +25,6 @@
     "angular-in-memory-web-api": "0.1.13",
     "angular2-cool-storage": "^1.1.0",
     "bootstrap": "^3.3.7",
-    "core-js": "^2.4.1",
     "ng2-modal": "0.0.22",
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-beta.12",

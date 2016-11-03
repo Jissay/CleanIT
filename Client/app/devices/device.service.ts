@@ -3,8 +3,8 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Device }     from '../members/device';
-import { DEVICES_URL } from './in-memory-data.service';
+import { Device }      from './device';
+import { DEVICES_URL } from '../users/in-memory-data.service';
 
 @Injectable()
 export class DeviceService {

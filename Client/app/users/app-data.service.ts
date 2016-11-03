@@ -1,7 +1,7 @@
 import { Injectable }    from '@angular/core';
 import { CoolLocalStorage } from 'angular2-cool-storage';
 
-import { User, MAIN_USER }	from '../members/user';
+import { User, MAIN_USER }	from './user';
 
 @Injectable()
 export class AppDataService {

@@ -3,13 +3,13 @@ import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 
-import { DeviceSearchService } from '../../services/device-search.service';
-import { Device } from '../../members/device';
+import { DeviceSearchService } from './search.service';
+import { Device } from './device';
 
 @Component({
 	selector: 'ci-device-search',
-	templateUrl: 'app/components/device-search/device-search.component.html',
-	styleUrls: [ 'app/components/device-search/device-search.component.css' ],
+	templateUrl: 'app/devices/html/search.component.html',
+	styleUrls: [ 'app/devices/css/search.component.css' ],
 	providers: [DeviceSearchService]
 })
 

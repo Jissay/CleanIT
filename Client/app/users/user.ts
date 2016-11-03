@@ -1,4 +1,4 @@
-import { Device }         from './device';
+import { Device }         from '../devices/device';
 
 export const MAIN_USER: User  = {
     id: 1,

@@ -1,14 +1,14 @@
 import { Component, OnInit } 	from '@angular/core';
 import { Router } 				from '@angular/router';
 
-import { MAIN_USER, User }	from '../../members/user';
-import { Device }			from '../../members/device';
-import { DeviceService }	from '../../services/device.service';
+import { MAIN_USER, User }	from '../users/user';
+import { Device }			from './device';
+import { DeviceService }	from './device.service';
 
 @Component({
 	selector: 'ci-dashboard',
-	templateUrl: 'app/components/dashboard/dashboard.component.html',
-	styleUrls: [ 'app/components/dashboard/dashboard.component.css' ]
+	templateUrl: 'app/devices/html/dashboard.component.html',
+	styleUrls: [ 'app/devices/css/dashboard.component.css' ]
 })
 
 export class DashboardComponent implements OnInit {

@@ -4,8 +4,8 @@ import { Component }  from '@angular/core';
 
 @Component({
   selector: 'ci-landing',
-  templateUrl: 'app/components/landing/landing.component.html',
-  styleUrls: [ 'app/components/landing/landing.component.css' ]
+  templateUrl: 'app/landing/landing.component.html',
+  styleUrls: [ 'app/landing/landing.component.css' ]
 })
 
 export class LandingComponent {

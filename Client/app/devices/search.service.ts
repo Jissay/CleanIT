@@ -2,7 +2,7 @@ import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
-import { Device }           from '../members/device';
+import { Device }           from './device';
 
 @Injectable()
 export class DeviceSearchService {

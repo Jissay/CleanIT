@@ -1,10 +1,10 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent }   	from './components/dashboard/dashboard.component';
-import { DevicesComponent }      	from './components/devices/devices.component';
-import { DeviceDetailComponent }  	from './components/device-detail/device-detail.component';
-import { LandingComponent }			from './components/landing/landing.component';
+import { DashboardComponent }   	from '../devices/dashboard.component';
+import { DevicesComponent }      	from '../devices/devices.component';
+import { DeviceDetailComponent }  	from '../devices/detail.component';
+import { LandingComponent }			from '../landing/landing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },

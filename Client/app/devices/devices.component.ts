@@ -1,18 +1,17 @@
 import { Component, OnInit }  from '@angular/core';
 import { Router } 			  	  from '@angular/router';
 
-import { User, MAIN_USER }        from '../../members/user';
-import { Device }                 from '../../members/device';
+import { User, MAIN_USER }        from '../users/user';
+import { Device }                 from './device';
 
-import { DeviceService }          from '../../services/device.service';
+import { DeviceService }          from './device.service';
 
 /** APP COMPONENT TEMPLATE **/
 
 @Component({
   selector: 'ci-devices',
-  templateUrl: 'app/components/devices/devices.component.html',
-  styleUrls: [ 'app/components/devices/devices.component.css' ]
-
+  templateUrl: 'app/devices/html/devices.component.html',
+  styleUrls: [ 'app/devices/css/devices.component.css' ]
 })
 
 /** APP COMPONENT CLASS **/

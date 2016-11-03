@@ -33,8 +33,8 @@ module.exports = {
  
   // Our angular app
   entry: {
-    'polyfills': path.resolve(__dirname, "app/polyfills.ts"),
-    'app': path.resolve(__dirname, "app/main.ts")
+    'polyfills': path.resolve(__dirname, "app/config/polyfills.ts"),
+    'app': path.resolve(__dirname, "app/config/main.ts")
   },
  
   // Config for our build file
