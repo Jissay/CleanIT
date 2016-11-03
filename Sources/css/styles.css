@@ -2,6 +2,7 @@
 body {
   max-width: 1140px; /* Blame yerome fowr zis */
   margin:auto;
+  position:relative;
 }
 
 * {
