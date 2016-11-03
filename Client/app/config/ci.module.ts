@@ -9,7 +9,7 @@ import { AppRoutingModule }   from './ci-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './services/in-memory-data.service';
+import { InMemoryDataService }  from '../users/in-memory-data.service';
 
 // Allows to store session data locally
 import { CoolStorageModule } from "angular2-cool-storage";
@@ -17,17 +17,16 @@ import { CoolStorageModule } from "angular2-cool-storage";
 // Modal dialogs
 import { ModalModule }       from "ng2-modal";
 
-import { AppComponent }           from './ci.component';
-import { DashboardComponent }     from './components/dashboard/dashboard.component';
-import { DevicesComponent }       from './components/devices/devices.component';
-import { DeviceDetailComponent }  from './components/device-detail/device-detail.component';
-import { DeviceSearchComponent }  from './components/device-search/device-search.component';
-import { LoginComponent }         from './components/login/login.component';
-import { LandingComponent }       from './components/landing/landing.component';
-import { HeaderComponent }        from './components/header/header.component';
+import { AppComponent }           from '../ci.component';
 
-import { DeviceService }          from './services/device.service';
-import { AppDataService }         from './services/app-data.service';
+// Modules of the app
+import { DeviceModule }           from '../devices/device.module';
+import { UserModule }             from '../users/user.module';
+import { MiscModule }             from '../misc/misc.module';
+import { LandingModule }          from '../landing/landing.module';
+
+// Singleton provider
+import { AppDataService }         from '../users/app-data.service';
 
 @NgModule({
     imports:      [ 
@@ -37,19 +36,17 @@ import { AppDataService }         from './services/app-data.service';
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
         CoolStorageModule,
-        ModalModule
+        ModalModule,
+
+        DeviceModule,
+        UserModule,
+        MiscModule,
+        LandingModule
     ],
     declarations: [ 
-        AppComponent,
-        DevicesComponent,
-        DeviceDetailComponent,
-        DeviceSearchComponent,
-        DashboardComponent,
-        LoginComponent,
-        LandingComponent,
-        HeaderComponent
+        AppComponent
     ],
-    providers:  [ DeviceService, AppDataService ],
+    providers:  [ AppDataService ],
     bootstrap:  [ AppComponent ]
 })
 

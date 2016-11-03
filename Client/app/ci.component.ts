@@ -1,7 +1,7 @@
 import { Component, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 
-import { AppDataService } 								  from './services/app-data.service';
-import { User } 										  from './members/user';
+import { AppDataService } 								  from './users/app-data.service';
+import { User } 										  from './users/user';
 
 @Component({
 	selector:	'ci-app',
