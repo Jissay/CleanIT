@@ -3,15 +3,15 @@
 :host {
 	top:0px;
 	background-color:#ABC;
+	padding: 10px;
 
 	/* Needed to avoid angular dynamic behavior
-	wich is to set component with display inline. */
+	which is to set component with display inline. */
 	display:block;
 }
 
 #auth-block {
 	float:right;
-	height:100%;
 }
 
 .header-item {

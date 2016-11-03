@@ -13,9 +13,16 @@ export class AppDataService {
         return this.localStorage.getObject('user');
     }
 
-    login(): void 
+    login(login: string, password: string): boolean 
     {
-        this.localStorage.setObject('user', MAIN_USER);
+        console.log(`Login : ${ login } / Password : ${ password }`);
+        if (login == MAIN_USER.login && password == MAIN_USER.password)
+        {
+            this.localStorage.setObject('user', MAIN_USER);
+            return true;
+        }
+
+        return false;
     }
 
     isLoggedIn(): boolean

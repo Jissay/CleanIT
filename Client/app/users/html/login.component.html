@@ -1,9 +1,20 @@
 <span *ngIf="!appDataService.isLoggedIn()">
-    <input placeholder="email or login"/>
-    <input placeholder="password" type="password"/>
-    <button class="header-item" (click)="appDataService.login()">Sign in</button>
+    <div>
+        <input placeholder="email or login" #login/>
+        <input placeholder="password" type="password" #password/>
+        <button class="header-item" (click)="loginFailed = !appDataService.login(login.value, password.value)">Sign in</button>
+    </div>
+
+    <div id="loginFailed">
+        <span *ngIf="loginFailed">Login or password invalid, try again !</span> 
+    </div>
+
+    <div>
+        <a href="">Create an account</a>
+    </div>
 </span>
 
 <span *ngIf="appDataService.isLoggedIn()">
+    Welcome {{ appDataService.user.name }}
     <button class="header-item" (click)="appDataService.disconnect()">Log out</button>
 </span>
