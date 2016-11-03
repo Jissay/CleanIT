@@ -2,7 +2,6 @@ import { Component, OnInit }  from '@angular/core';
 
 import { AppComponent } from '../../ci.component';
 
-import { AppDataService } from '../../users/app-data.service';
 import { User } from '../../users/user';
 
 @Component({
@@ -12,5 +11,5 @@ import { User } from '../../users/user';
 })
 export class HeaderComponent {
   
-  	constructor(private appDataService: AppDataService) {}
+  	constructor() {}
 }
