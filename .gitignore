@@ -1,6 +1,9 @@
 Sources/app/**/*.js
 Sources/app/**/*.map
-Sources/app/build/
-Sources/app/build/**
+Sources/build/**
+Sources/build/
+Sources/node_modules/**
+Sources/node_modules/
 Sources/npm-debug.log
+npm-debug.log
 .DS_Store
