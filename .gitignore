@@ -4,6 +4,7 @@ Client/build/**
 Client/build/
 Client/node_modules/**
 Client/node_modules/
-Client/npm-debug.log
+Server/node_modules/**
+Server/node_modules/
 npm-debug.log
 .DS_Store
