@@ -8,8 +8,14 @@ router.get('/', function(req, res, next) {
 });
 
 /* DEVICES Service settings */
-router.get('/devices', function(req, res, next) {
-   res.send(devicesService.getDevices());
-});
+// router.get('/devices', function(req, res, next) {
+//    res.send(devicesService.getDevices());
+// });
+
+// router.get('/device', function(req, res, next) {
+//   res.send(devicesService.getDevice(1));
+// });
+
+
 
 module.exports = router;
