@@ -4,7 +4,8 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Device }      from './device';
-import { DEVICES_URL } from '../users/in-memory-data.service';
+
+var DEVICESSERVICE_URL = 'http://localhost:3000/api/devices';
 
 @Injectable()
 export class DeviceService {
@@ -14,7 +15,7 @@ export class DeviceService {
     constructor(private http: Http) { }
 
     getDevices(): Promise<Device[]> {
-        return this.http.get(DEVICES_URL)
+        return this.http.get(DEVICESSERVICE_URL)
                    .toPromise()
                    .then(response => response.json().data as Device[])
                    .catch(this.handleError);
@@ -26,14 +27,14 @@ export class DeviceService {
 
     create(name: string): Promise<Device> {
         return this.http
-            .post(DEVICES_URL, JSON.stringify({name: name}), {headers: this.headers})
+            .post(DEVICESSERVICE_URL, JSON.stringify({name: name}), {headers: this.headers})
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
     }
 
     update(device: Device): Promise<Device> {
-        const url = `${DEVICES_URL}/${device.id}`;
+        const url = `${DEVICESSERVICE_URL}/${device.id}`;
         return this.http
             .put(url, JSON.stringify(device), {headers: this.headers})
             .toPromise()
@@ -42,7 +43,7 @@ export class DeviceService {
     }
 
     delete(id: number): Promise<void> {
-        const url = `${DEVICES_URL}/${id}`;
+        const url = `${DEVICESSERVICE_URL}/${id}`;
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null)

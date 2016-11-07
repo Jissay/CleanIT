@@ -2,7 +2,9 @@
 var mongoose = require('mongoose');
 var mongoURL = '127.0.0.1:27017';
 
+/* ----------------- */
 /* CREATING DATABASE */
+/* ----------------- */
 
 // Connect to MongoDB and create a database called CleanIT
 mongoose.connect('mongodb://' + mongoURL + '/CleanIT');
@@ -14,15 +16,19 @@ var UserSchema = new mongoose.Schema({
 	password: 	{ type: String, required: true }
 });
 
-var DeviceSchema = new mongoose.Schema({
-	name: 		{ type: String, required: true }
-})
+var DeviceSchema = new mongoose.Schema({ name: { type: String, required: true } });
 
 // Create a model based on the schema
 var User = mongoose.model('User', UserSchema);
 var Device = mongoose.model('Device', DeviceSchema);
 
+// Clean previous inserted items
+User.remove({}, function(err) { console.log("-- User collection cleared."); });
+Device.remove({}, function(err) { console.log("-- Device collection cleared."); });
+
+/* --------------- */
 /* ADDING RAW DATA */
+/* --------------- */
 
 // Create and save users
 var operations = 0;
@@ -47,13 +53,15 @@ var intvl = setInterval(function() {
     }
 }, 100);
 
-/* CONVENIENCE */
+/* -------------------------- */
+/* CONVENIENCE INSERT METHODS */
+/* -------------------------- */
 function createUser(name, login, password) {
 	User.create({name:name, login:login, password:password}, function(err, user) {
 		if (err)
 			console.log(err);
 		else
-			console.log(user);
+			console.log("-- User " + name + " inserted.");
 
 		operations++;
 	});
@@ -64,7 +72,7 @@ function createDevice(name) {
 		if (err)
 			console.log(err);
 		else
-			console.log(device);
+			console.log("-- Device " + name + " inserted.");
 
 		operations++;
 	});

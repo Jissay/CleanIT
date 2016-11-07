@@ -7,10 +7,6 @@ import { HttpModule }     from '@angular/http';
 
 import { AppRoutingModule }   from './ci-routing.module';
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from '../users/in-memory-data.service';
-
 // Allows to store session data locally
 import { CoolStorageModule } from "angular2-cool-storage";
 
@@ -33,7 +29,6 @@ import { AppDataService }         from '../users/app-data.service';
         BrowserModule, 
         FormsModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
         CoolStorageModule,
         ModalModule,

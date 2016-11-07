@@ -22,7 +22,6 @@
     "@angular/platform-server": "2.1.0",
     "@angular/router": "3.1.0",
     "@angularclass/conventions-loader": "^1.0.2",
-    "angular-in-memory-web-api": "0.1.13",
     "angular2-cool-storage": "^1.1.0",
     "bootstrap": "^3.3.7",
     "ng2-modal": "0.0.22",

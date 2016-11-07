@@ -11,6 +11,15 @@ router.get('/', function(req, res, next) {
     res.json(devices);
   });
 });
+
+/* GET /devices/id */
+router.get('/:id', function(req, res, next) {
+  Device.findById(req.params.id, function(err, device) {
+    if(err) res.send(err);
+    res.json(device);
+  });
+});
+
 module.exports = router;
 
 /* MongoDB utility */
