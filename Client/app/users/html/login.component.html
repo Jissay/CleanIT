@@ -1,12 +1,12 @@
 <span *ngIf="!appDataService.isLoggedIn()">
     <div>
-        <input placeholder="email or login" #login/>
+        <input placeholder="email" #email/>
         <input placeholder="password" type="password" #password/>
-        <button class="header-item" (click)="loginFailed = !appDataService.login(login.value, password.value)">Sign in</button>
+        <button class="header-item" (click)="loginFailed = !appDataService.login(email.value, password.value)">Sign in</button>
     </div>
 
     <div id="loginFailed">
-        <span *ngIf="loginFailed">Login or password invalid, try again !</span> 
+        <span *ngIf="loginFailed">Email or password invalid, try again !</span> 
     </div>
 
     <div>

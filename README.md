@@ -8,3 +8,5 @@ How to install MEAN Stack : http://adrianmejia.com/blog/2014/10/01/creating-a-re
 
 To install mongodb on development mac : brew install mongodb && mongod
 To visualize data from mongo, use Robomongo : https://robomongo.org/download
+
+Cross references issue : http://enable-cors.org/server_expressjs.html

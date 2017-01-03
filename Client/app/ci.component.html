@@ -1,12 +1,32 @@
 <ci-header></ci-header>
 
-<h1>Hello<span *ngIf="user"> {{user.name}}</span>, welcome !</h1>
-<nav>
-	<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-	<a routerLink="/devices" routerLinkActive="active">Devices</a>
-</nav>
+<!-- If user is already connected, show the dashboard -->
 
-<button (click)="myModal.open()">Open modal dialog</button>
+<div *ngIf="MAIN_USER">
+    <h1>Hello<span *ngIf="user"> {{user.name}}</span>, welcome !</h1>
+    <nav>
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/devices" routerLinkActive="active">Devices</a>
+    </nav>
+
+</div>
+
+<!-- If it's not, show the landing page -->
+
+<div *ngIf="!MAIN_USER">
+    <!-- Show the landing page here -->
+    <a routerLink="/landing" routerLinkActive="false"></a>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
+
+<!-- HOW TO CREATE A MODAL VIEW -->
+
+
+<!--<button (click)="myModal.open()">Open modal dialog</button>
 
 <modal #myModal title="Modal title"
         cancelButtonLabel="cancel"
@@ -28,6 +48,4 @@
         Modal footer content goes there.
     </modal-footer>
 
-</modal>
-
-<router-outlet></router-outlet>
+</modal>-->

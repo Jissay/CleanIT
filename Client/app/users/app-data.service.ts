@@ -13,10 +13,10 @@ export class AppDataService {
         return this.localStorage.getObject('user');
     }
 
-    login(login: string, password: string): boolean 
+    login(email: string, password: string): boolean 
     {
-        console.log(`Login : ${ login } / Password : ${ password }`);
-        if (login == MAIN_USER.login && password == MAIN_USER.password)
+        console.log(`Email : ${ email } / Password : ${ password }`);
+        if (email == MAIN_USER.email && password == MAIN_USER.password)
         {
             this.localStorage.setObject('user', MAIN_USER);
             return true;

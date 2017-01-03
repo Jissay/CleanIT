@@ -19,39 +19,48 @@ var UserSchema = new mongoose.Schema({
 var DeviceSchema = new mongoose.Schema({ name: { type: String, required: true } });
 
 // Create a model based on the schema
+var operations = 0;
 var User = mongoose.model('User', UserSchema);
 var Device = mongoose.model('Device', DeviceSchema);
 
 // Clean previous inserted items
-User.remove({}, function(err) { console.log("-- User collection cleared."); });
-Device.remove({}, function(err) { console.log("-- Device collection cleared."); });
+console.log("*** CLEARING PREVIOUS DATABASE ***");
+User.remove({}, function(err) { 
+	console.log("-- User collection cleared."); 
+	
+	Device.remove({}, function(err) { 
+		console.log("-- Device collection cleared."); 
+	
+		console.log("*** CREATING NEW DATABASE ***");
 
-/* --------------- */
-/* ADDING RAW DATA */
-/* --------------- */
+		/* --------------- */
+		/* ADDING RAW DATA */
+		/* --------------- */
 
-// Create and save users
-var operations = 0;
-createUser("Jean-Christophe", "jc.ricard@axible.io", "jrd_at14");
-createUser("Adrien", "adrien.dosreis@axible.io", "ads_at14");
+		// Create and save users
+		createUser("Jean-Christophe", "jc.ricard@axible.io", "jrd_at14");
+		createUser("Adrien", "adrien.dosreis@axible.io", "ads_at14");
 
-// Create and save devices
-createDevice("Sens'it");
-createDevice("Axibox");
-createDevice("Novapass");
-createDevice("DeltaWifi");
-createDevice("Extelsmart");
-createDevice("QUB");
+		// Create and save devices
+		createDevice("Sens'it");
+		createDevice("Axibox");
+		createDevice("Novapass");
+		createDevice("DeltaWifi");
+		createDevice("Extelsmart");
+		createDevice("QUB");
 
-var totalOperations = 8
+		var totalOperations = 8
 
-// Wait for all entries to get saved
-var intvl = setInterval(function() {
-    if (operations >= totalOperations) { 
-		console.log("Ending script after " + operations + " data being inserted.");
-		process.exit();
-    }
-}, 100);
+		// Wait for all entries to get saved
+		var intvl = setInterval(function() {
+			if (operations >= totalOperations) { 
+				console.log("Ending script after " + operations + " data being inserted.");
+				process.exit();
+			}
+		}, 100);
+	});
+});
+
 
 /* -------------------------- */
 /* CONVENIENCE INSERT METHODS */
