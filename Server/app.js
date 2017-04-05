@@ -36,10 +36,10 @@ app.use(function(req, res, next) {
 });
 
 /* SETUP ROUTES */
-var devices = require('./services/devices');
+var games = require('./services/games');
 
 app.use('/', index);
-app.use(BASE_URL + 'devices', devices);
+app.use(BASE_URL + 'games', games);
 
 /* ERROR HANDLING */
 

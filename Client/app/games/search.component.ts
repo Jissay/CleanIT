@@ -3,23 +3,23 @@ import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 
-import { DeviceSearchService } from './search.service';
-import { Device } from './device';
+import { GameSearchService } from './search.service';
+import { Game } from './game';
 
 @Component({
-	selector: 'ci-device-search',
-	templateUrl: 'app/devices/html/search.component.html',
-	styleUrls: [ 'app/devices/css/search.component.css' ],
-	providers: [DeviceSearchService]
+	selector: 'ci-game-search',
+	templateUrl: 'app/games/html/search.component.html',
+	styleUrls: [ 'app/games/css/search.component.css' ],
+	providers: [GameSearchService]
 })
 
-export class DeviceSearchComponent implements OnInit {
+export class GameSearchComponent implements OnInit {
   
-	devices: Observable<Device[]>;
+	games: Observable<Game[]>;
 	private searchTerms = new Subject<string>();
   
   	constructor(
-		private deviceSearchService: DeviceSearchService,
+		private gameSearchService: GameSearchService,
 		private router: Router
 	) {}
 
@@ -29,23 +29,23 @@ export class DeviceSearchComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.devices = this.searchTerms
+		this.games = this.searchTerms
 		.debounceTime(300)        // wait for 300ms pause in events
 		.distinctUntilChanged()   // ignore if next search term is same as previous
 		.switchMap(term => term   // switch to new observable each time
 			// return the http search observable
-			? this.deviceSearchService.search(term)
+			? this.gameSearchService.search(term)
 			// or the observable of empty heroes if no search term
-			: Observable.of<Device[]>([]))
+			: Observable.of<Game[]>([]))
 		.catch(error => {
 			// TODO: real error handling
 			console.log(error);
-			return Observable.of<Device[]>([]);
+			return Observable.of<Game[]>([]);
 		});
 	}
 
-	gotoDetail(device: Device): void {
-		let link = ['/detail', device.id];
+	gotoDetail(game: Game): void {
+		let link = ['/detail', game.id];
 		this.router.navigate(link);
 	}
 }

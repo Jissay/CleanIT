@@ -3,47 +3,47 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Device }      from './device';
+import { Game }      from './game';
 
-var DEVICESSERVICE_URL = 'http://localhost:3000/api/devices';
+var GAMESSERVICE_URL = 'http://localhost:3000/api/games';
 
 @Injectable()
-export class DeviceService {
+export class GameService {
 
     private headers = new Headers({'Content-Type': 'application/json'});
 
     constructor(private http: Http) { }
 
-    getDevices(): Promise<Device[]> {
-        return this.http.get(DEVICESSERVICE_URL)
+    getGames(): Promise<Game[]> {
+        return this.http.get(GAMESSERVICE_URL)
                    .toPromise()
-                   .then(response => response.json().data as Device[])
+                   .then(response => response.json().data as Game[])
                    .catch(this.handleError);
     }
 
-    getDevice(id: number): Promise<Device> {
-        return this.getDevices().then(devices => devices.find(device => device.id === id));
+    getGame(id: number): Promise<Game> {
+        return this.getGames().then(games => games.find(game => game.id === id));
     }
 
-    create(name: string): Promise<Device> {
+    create(name: string): Promise<Game> {
         return this.http
-            .post(DEVICESSERVICE_URL, JSON.stringify({name: name}), {headers: this.headers})
+            .post(GAMESSERVICE_URL, JSON.stringify({name: name}), {headers: this.headers})
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
     }
 
-    update(device: Device): Promise<Device> {
-        const url = `${DEVICESSERVICE_URL}/${device.id}`;
+    update(game: Game): Promise<Game> {
+        const url = `${GAMESSERVICE_URL}/${game.id}`;
         return this.http
-            .put(url, JSON.stringify(device), {headers: this.headers})
+            .put(url, JSON.stringify(game), {headers: this.headers})
             .toPromise()
-            .then(() => device)
+            .then(() => game)
             .catch(this.handleError);
     }
 
     delete(id: number): Promise<void> {
-        const url = `${DEVICESSERVICE_URL}/${id}`;
+        const url = `${GAMESSERVICE_URL}/${id}`;
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null)

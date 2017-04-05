@@ -16,20 +16,20 @@ var UserSchema = new mongoose.Schema({
 	password: 	{ type: String, required: true }
 });
 
-var DeviceSchema = new mongoose.Schema({ name: { type: String, required: true } });
+var GameSchema = new mongoose.Schema({ name: { type: String, required: true } });
 
 // Create a model based on the schema
 var operations = 0;
 var User = mongoose.model('User', UserSchema);
-var Device = mongoose.model('Device', DeviceSchema);
+var Game = mongoose.model('Game', GameSchema);
 
 // Clean previous inserted items
 console.log("*** CLEARING PREVIOUS DATABASE ***");
 User.remove({}, function(err) { 
 	console.log("-- User collection cleared."); 
 	
-	Device.remove({}, function(err) { 
-		console.log("-- Device collection cleared."); 
+	Game.remove({}, function(err) { 
+		console.log("-- Game collection cleared."); 
 	
 		console.log("*** CREATING NEW DATABASE ***");
 
@@ -41,13 +41,13 @@ User.remove({}, function(err) {
 		createUser("Jean-Christophe", "jc.ricard@axible.io", "jrd_at14");
 		createUser("Adrien", "adrien.dosreis@axible.io", "ads_at14");
 
-		// Create and save devices
-		createDevice("Sens'it");
-		createDevice("Axibox");
-		createDevice("Novapass");
-		createDevice("DeltaWifi");
-		createDevice("Extelsmart");
-		createDevice("QUB");
+		// Create and save Games
+		createGame("Sens'it");
+		createGame("Axibox");
+		createGame("Novapass");
+		createGame("DeltaWifi");
+		createGame("Extelsmart");
+		createGame("QUB");
 
 		var totalOperations = 8
 
@@ -76,12 +76,12 @@ function createUser(name, login, password) {
 	});
 }
 
-function createDevice(name) {
-	Device.create({name:name}, function(err, device) {
+function createGame(name) {
+	Game.create({name:name}, function(err, game) {
 		if (err)
 			console.log(err);
 		else
-			console.log("-- Device " + name + " inserted.");
+			console.log("-- Game " + name + " inserted.");
 
 		operations++;
 	});

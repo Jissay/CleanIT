@@ -13,7 +13,7 @@ export class AppComponent {
 	private _title: String;
 
 	constructor(private appDataService: AppDataService) {
-		this._title = 'Tour of Devices';
+		this._title = 'Tour of Games';
 	}
 
 	get title(): String

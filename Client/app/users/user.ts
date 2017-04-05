@@ -1,11 +1,11 @@
-import { Device }         from '../devices/device';
+import { Game }         from '../games/game';
 
 export const MAIN_USER: User  = {
     id: 1,
     name: "Jissay",
     email: "Jissay",
     password: "Jissay",
-    devices: new Array<Device>()
+    games: new Array<Game>()
 };
 
 export interface User {
@@ -13,5 +13,5 @@ export interface User {
     name: String;
     email: String;
     password: String,
-    devices: Device[];
+    games: Game[];
 }

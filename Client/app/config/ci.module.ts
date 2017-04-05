@@ -16,7 +16,7 @@ import { ModalModule }       from "ng2-modal";
 import { AppComponent }           from '../ci.component';
 
 // Modules of the app
-import { DeviceModule }           from '../devices/device.module';
+import { GameModule }           from '../games/game.module';
 import { UserModule }             from '../users/user.module';
 import { MiscModule }             from '../misc/misc.module';
 import { LandingModule }          from '../landing/landing.module';
@@ -33,7 +33,7 @@ import { AppDataService }         from '../users/app-data.service';
         CoolStorageModule,
         ModalModule,
 
-        DeviceModule,
+        GameModule,
         UserModule,
         MiscModule,
         LandingModule

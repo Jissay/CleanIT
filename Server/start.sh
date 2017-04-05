@@ -8,7 +8,7 @@
 path=`pwd`
 
 # Create the database directory if needed
-if [ ! -d "$path/database/db" ]
+if [ ! -d "$path/database/db" ]; then
     mkdir "$path/database/db"
 fi
 

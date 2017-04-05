@@ -1,0 +1,10 @@
+<h2>Top Games !</h2>
+<div class="grid grid-pad">
+  <div *ngFor="let game of topGames" (click)="gotoDetail(game)" class="col-1-4">
+    <div class="module game">
+      <h4>{{game.name}}</h4>
+    </div>
+  </div>
+</div>
+
+<ci-game-search></ci-game-search>

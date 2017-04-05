@@ -2,21 +2,21 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 var router = express.Router();
-var Device = require('../members/Device.js');
+var Game = require('../members/game.js');
 
-/* GET /devices listing. */
+/* GET /games listing. */
 router.get('/', function(req, res, next) {
-  Device.find(function (err, devices) {
+  Game.find(function (err, games) {
     if (err) return next(err);
-    res.json(devices);
+    res.json(games);
   });
 });
 
-/* GET /devices/id */
+/* GET /games/id */
 router.get('/:id', function(req, res, next) {
-  Device.findById(req.params.id, function(err, device) {
+  Game.findById(req.params.id, function(err, game) {
     if(err) res.send(err);
-    res.json(device);
+    res.json(game);
   });
 });
 
